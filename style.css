@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2f2a2a;
+    color: white;
+}
+
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: .9em;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+hr{
+    color: #b9b9b9;
+    margin: 20px 20px ;
+}
+
+
+h1 {
+    color: #141413;
+    font-size: 3em;
+    text-align: center;
+    margin: 20px 0;
+}
+
+h2 {
+    color: #f6862e;
+    margin-bottom: 10px;
+}
+
+
+.intro-image {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    text-align: justify;
+    margin: 20px 0;
+}
+
+
+
+.intro p {
+    font-size: 1em;
+    line-height: 1.6em;
+}
+
+button {
+    color: white;
+    background-color: #f6862e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d4751c;
+}
+
+section {
+    margin: 20px 0;
+    padding: 0 10%;
+}
+
+.feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box {
+    background-color: #e6e6e6;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 45%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.box h3 {
+    margin-top: 0;
+    color: #f6862e;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px 0;
+}
+
+.timeline-container h2{
+    color: #f6862e;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #2f2a2a;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #f6862e;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px; /* Align the circle properly */
+    background-color: #f6862e;
+    border: 4px solid white;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #e6e6e6;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #e6e6e6 transparent transparent;
+}
+
+.right::after {
+    left: -17px; /* Align the circle properly */
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: #e6e6e6;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 600px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-container::after {
+        left: 15px;
+        right: auto;
+    }
+
+    .left::before, .right::before {
+        left: 60px;
+        border: none;
+    }
+
+    .left::after, .right::after {
+        left: 10px;
+    }
+
+    .timeline-container.left, .timeline-container.right {
+        left: 0;
+    }
+}
+
+.footer {
+    background-color: #2f2a2a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 10px 0;
+}
